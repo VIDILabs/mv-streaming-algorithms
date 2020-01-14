@@ -1,0 +1,15 @@
+*.out
+*.o
+*.gz
+*.log
+*.pyc
+.DS_Store
+data/
+build*
+*.pro.user
+.Rhistory
+.RData
+meeting/
+.ipynb_checkpoints/
+.vscode
+.atom-beautify.*
