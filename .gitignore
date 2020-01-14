@@ -13,3 +13,11 @@ meeting/
 .ipynb_checkpoints/
 .vscode
 .atom-beautify.*
+*.so
+Makefile
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+__pycache__/
+.Rhistory
+
