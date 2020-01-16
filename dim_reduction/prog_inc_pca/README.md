@@ -1,7 +1,7 @@
 ## C++ Library and Python Module for Progressive Usage of Incremental PCA for Streaming Multidimensional Data
 
-Incremental PCA for visualizing streaming multidimensional data from [Fujiwara et al., xxxx].
-This module apply the method above a progressive manner.
+This algorithm provides progressive usage of incremental PCA for visualizing streaming multidimensional data from Fujiwara et al., "An Incremental Dimensionality Reduction Method for Visualizing Streaming Multidimensional Data", 2020.
+For more details, please refer to Kesavan et al., "A Visual Analytics Framework for Reviewing Streaming Performance Data", 2020.
 
 -----
 
@@ -61,7 +61,7 @@ Setup
 
 * Move to 'inc_pca' directory then compile with:
 
-    ``c++ -O3 -Wall -mtune=native -march=native -shared -std=c++11 -I../inc_pca/ -I/usr/include/eigen3/ -fPIC `python3 -m pybind11 --includes` ../inc_pca/inc_pca.cpp prog_inc_pca.cpp prog_inc_pca_wrap.cpp -o prog_inc_pca_cpp`python3-config --extension-suffix` ``
+    ``c++ -O3 -Wall -mtune=native -march=native -shared -std=c++11 -I../inc_pca/ -I/usr/include/eigen3/ -fPIC `python3 -m pybind11 --includes` ../streaming-vis-pca/inc_pca.cpp prog_inc_pca.cpp prog_inc_pca_wrap.cpp -o prog_inc_pca_cpp`python3-config --extension-suffix` ``
 
 * This generates a shared library, "prog_inc_pca_cpp.xxxx.so" (e.g., prog_inc_pca_cpp.cpython-37m-x86_64-linux-gnu.so).
 
@@ -83,7 +83,7 @@ Usage
     * Import the installed module from python (e.g., `from prog_inc_pca import ProgIncPCA`). See sample.py for examples.
 
 * With C++
-    * Include header files (prog_inc_pca.hpp) in C++ code with cpp files (prog_inc_pca.cpp).
+    * Include header files (prog_inc_pca.hpp, inc_pca.hpp in ../streaming-vis-pca/) in C++ code with cpp files (prog_inc_pca.cpp, inc_pca.cpp in ../streaming-vis-pca/).
 
 ******
 

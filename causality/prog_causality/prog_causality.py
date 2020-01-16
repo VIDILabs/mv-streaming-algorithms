@@ -9,7 +9,7 @@ class ProgCausality():
     """Causality analysis with vector autoregression, Granger causality test,
     impulse response function, and variance decompositon. Additionally,
     progressive usage of vector autoregression is included.
-    Implementation is based on 'statsmodels' package
+    Implementation uses 'statsmodels' package
     (https://github.com/statsmodels/statsmodels).
     statsmodels' vector autoregression includes automatic selection of best
     lags and orders.
@@ -120,15 +120,6 @@ class ProgCausality():
     ...         'IR 1 step later': ir_to[:, 1],
     ...         'VD 1 step later': vd_to[:, 1]
     ...     }))
-    Notes
-    -----
-    VAR: (TODO put references)
-    Order selection for VAR: (TODO put references)
-    Granger Causality: (TODO put references)
-    Impulse Response Function: (TODO put references)
-    Variance decompositon: (TODO put references)
-    References
-    ----------
     """
 
     def __init__(self):

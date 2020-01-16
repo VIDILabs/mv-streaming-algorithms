@@ -8,7 +8,7 @@ Here, several popular offline causality analysis methods are implemented in caus
 - impulse response function: measure how sensitively respond other variables when one variable causes changes
 - variance decomposition: measure how sensitively respond other variables when one variable causes unexpected changes
 
-In addition to the methods above, for streaming or progressive analysis, a progressive usage of VAR modeling is also supported.
+In addition to the methods above, for streaming or progressive analysis, a progressive usage of VAR modeling is also supported. This algorithm is introduced in Kesavan et al., "A Visual Analytics Framework for Reviewing Streaming Performance Data", 2020.
 - adaptive, progressive VAR: VAR using only a limited number of time points which can be finished calculation around an indicated latency.   
 
 -----
@@ -40,6 +40,8 @@ Setup
 
     `pip3 install .`
 
+* To run sample.py, ProgIncPCA also needs to be setup. See ../../dim_reduction/ProgIncPCA/README.md for this procedure.
+
 #### Linux (tested on Ubuntu 18.0.4 LTS)
 * Install libraries
 
@@ -53,12 +55,11 @@ Setup
 
     `pip3 install pandas`
 
-    Also, ProgIncPCA needs to be setup. See ../dim_reduction/ProgIncPCA/README.md for this procedure. Place prog_inc_pca.py and shared library (prog_inc_pca_cpp.xxx.so) in the same directory with sample.py.
-
 * Install the modules with pip3.
 
     `pip3 install .`
 
+* To run sample.py, ProgIncPCA also needs to be setup. See ../../dim_reduction/ProgIncPCA/README.md for this procedure.
 
 Usage
 -----

@@ -1,6 +1,7 @@
 ## C++ Library and Python Module for An incremental PCA-based change point detection (CPD) with adaptive forgetting factor for multivariate streaming data
 
-The algorithm is developed with the ideas of PCA-based CPD [1] and CPD with adaptive forgetting factor (AFF) [2]. Also, we have improved the detection by applying incremental PCA instead of ordinary PCA.
+This CPD algorithm is developed with the ideas of PCA-based CPD [1] and CPD with adaptive forgetting factor (AFF) [2]. Also, we have improved the detection by applying incremental PCA instead of ordinary PCA.
+For more details, please refer to Kesavan et al., "A Visual Analytics Framework for Reviewing Streaming Performance Data", 2020. 
 
 [1] A. Qahtan, B. Alharbi, S. Wang, and X. Zhang,
 A PCA-Based Change Detection Framework for Multidimensional Data Streams,
