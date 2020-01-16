@@ -1,7 +1,11 @@
 import glob
 from distutils.core import setup
+import platform
 
-inc_pca_cpp_so = glob.glob('inc_pca_cpp*.so')[0]
+if platform.system() == "Linux":
+    inc_pca_cpp_so = glob.glob('inc_pca_cpp')[0]
+else:
+    inc_pca_cpp_so = glob.glob('inc_pca_cpp*.so')[0]
 
 setup(
     name='inc-pca',

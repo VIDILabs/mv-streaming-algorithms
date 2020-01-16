@@ -1,7 +1,11 @@
 import glob
 from distutils.core import setup
+import platform
 
-ipca_aff_cpd_so = glob.glob('ipca_aff_cpd*.so')[0]
+if platform.system() == "Linux":
+    ipca_aff_cpd_so = glob.glob('ipca_aff_cpd')[0]
+else:
+    ipca_aff_cpd_so = glob.glob('ipca_aff_cpd*.so')[0]
 
 setup(
     name='ipca_aff_cpd',
