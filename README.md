@@ -8,7 +8,10 @@ About
 * Algorithms for multivariate streaming data analysis. We originally developed these algorithms for : ***A Visual Analytics Framework for Reviewing Streaming Performance Data***.
 Suraj P. Kesavan, Takanori Fujiwara, Jianping Kelvin Li, Caitlin Ross, Misbah Mubarak, Christopher D. Carothers, Robert B. Ross, and Kwan-Liu Ma. In Proceedings of IEEE Pacific Visualization Symposium (PacificVis), forthcoming
 
-* Demonstration of a system using the algorithms: https://youtu.be/pxthZSJ1jqs
+* Demonstration of a system using the algorithms: https://youtu.be/pxthZSJ1jqs.
+
+  Also, you can find source code of the demonstrated system: https://github.com/VIDILabs/Streaming-ROSS-Project.
+
 
 * Features
   * Online and progressive algorithms for multivariate streaming data analysis. These algorithms can provide results with required latency.

@@ -2,10 +2,12 @@ import glob
 from distutils.core import setup
 import platform
 
-if platform.system() == "Linux":
-    inc_pca_cpp_so = glob.glob('inc_pca_cpp')[0]
-else:
-    inc_pca_cpp_so = glob.glob('inc_pca_cpp*.so')[0]
+if len(glob.glob('inc_pca_cpp*.so')) == 0:
+    raise ValueError(
+        'inc_pca_cpp*.so is not found. You have not finished \
+        compiling related cpp hpp files or \'python3-config --extension-suffix\'\
+        command does not work properly in your environment')
+inc_pca_cpp_so = glob.glob('inc_pca_cpp*.so')[0]
 
 setup(
     name='inc-pca',

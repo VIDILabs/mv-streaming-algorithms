@@ -61,7 +61,7 @@ Setup
 
 * Move to 'inc_pca' directory then compile with:
 
-    ``c++ -O3 -Wall -mtune=native -march=native -shared -std=c++11 -I../inc_pca/ -I/usr/include/eigen3/ -fPIC `python3 -m pybind11 --includes` ../streaming-vis-pca/inc_pca.cpp prog_inc_pca.cpp prog_inc_pca_wrap.cpp -o prog_inc_pca_cpp`python3-config --extension-suffix` ``
+    ``c++ -O3 -Wall -mtune=native -march=native -shared -std=c++11 -I../streaming-vis-pca/ -I/usr/include/eigen3/ -fPIC `python3 -m pybind11 --includes` ../streaming-vis-pca/inc_pca.cpp prog_inc_pca.cpp prog_inc_pca_wrap.cpp -o prog_inc_pca_cpp`python3-config --extension-suffix` ``
 
 * This generates a shared library, "prog_inc_pca_cpp.xxxx.so" (e.g., prog_inc_pca_cpp.cpython-37m-x86_64-linux-gnu.so).
 

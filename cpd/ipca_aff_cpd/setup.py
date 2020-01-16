@@ -2,10 +2,12 @@ import glob
 from distutils.core import setup
 import platform
 
-if platform.system() == "Linux":
-    ipca_aff_cpd_so = glob.glob('ipca_aff_cpd')[0]
-else:
-    ipca_aff_cpd_so = glob.glob('ipca_aff_cpd*.so')[0]
+if len(glob.glob('ipca_aff_cpd_cpp*.so')) == 0:
+    raise ValueError(
+        'ipca_aff_cpd_cpp*.so is not found. You have not finished \
+        compiling related cpp hpp files or \'python3-config --extension-suffix\'\
+        command does not work properly in your environment')
+ipca_aff_cpd_so = glob.glob('ipca_aff_cpd_cpp*.so')[0]
 
 setup(
     name='ipca_aff_cpd',
