@@ -33,12 +33,8 @@ IPCAAFFCPD::feedWithPCAResultReturn(Eigen::RowVectorXd const &newTimePoint,
 
   Eigen::MatrixXd pcaResult;
   if (beforeFirstPartialFit) {
-      // using pca is too slow when the vector is large
-      // pcaResult = pca(newTimePoint, 1); // normal PCA
-
-      // instead providing average should provide the same result
-      pcaResult = Eigen::MatrixXd::Ones(newTimePoint.size(), 1);
-      pcaResult /= double(newTimePoint.size());
+      // TODO: using pca is too slow when the vector is large
+      pcaResult = pca(newTimePoint, 1); // normal PCA
   } else if (!useIncPCA) {
     pcaResult = pca(newTimePoint, 1); // normal PCA
   } else {
